@@ -5,6 +5,7 @@ import Image from "next/image";
 
 export default function RescuePage() {
     const [inView, setInView] = useState(false);
+    const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -33,7 +34,7 @@ export default function RescuePage() {
                         className="h-auto w-[600px]"
                     />
                     <div className="">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4">
                             Rescue, Care, and Hope for <br /> Polk County’s Pit Bulls
                         </h2>
                         <div className="space-y-6">
@@ -81,19 +82,19 @@ export default function RescuePage() {
                     className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center my-12 bg-gray-50 p-12"
                 >
                     <div>
-                        <h3 className="text-3xl md:text-4xl font-bold text-[#2E3B4B]">
+                        <h3 className="text-3xl md:text-5xl font-bold text-[#2E3B4B]">
                             {inView && <CountUp end={26} duration={3} separator="," />}K+
                         </h3>
                         <p className="text-gray-600">Dog Adopted</p>
                     </div>
                     <div>
-                        <h3 className="text-3xl md:text-4xl font-bold text-[#2E3B4B]">
+                        <h3 className="text-3xl md:text-5xl font-bold text-[#2E3B4B]">
                             {inView && <CountUp end={15} duration={3} separator="," />}K+
                         </h3>
                         <p className="text-gray-600">Shelters & Rescues</p>
                     </div>
                     <div>
-                        <h3 className="text-3xl md:text-4xl font-bold text-[#2E3B4B]">
+                        <h3 className="text-3xl md:text-5xl font-bold text-[#2E3B4B]">
                             {inView && <CountUp end={18} duration={3} separator="," />}+
                         </h3>
                         <p className="text-gray-600">Years of Impact</p>
@@ -102,31 +103,43 @@ export default function RescuePage() {
 
                 {/* Video Section */}
                 <div className="flex justify-center items-center">
-                    <div className="relative">
-                        <Image
-                            src="/images/rescue/container.png"
-                            alt="Video Thumbnail"
-                            width={1000}
-                            height={800}
-                            className="h-auto w-[1000px]"
-                        />
-                        <a
-                            href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="absolute inset-0 flex items-center justify-center"
-                        >
-                            <div className="bg-white p-4 rounded-full shadow-md hover:scale-110 transition-transform">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="currentColor"
-                                    viewBox="0 0 24 24"
-                                    className="w-10 h-10 text-blue-500"
+                    <div className="relative h-auto w-[1000px]">
+                        {!isVideoPlaying ? (
+                            <>
+                                <Image
+                                    src="/images/rescue/container.png"
+                                    alt="Video Thumbnail"
+                                    width={1000}
+                                    height={563}
+                                    className="h-auto w-[1000px]"
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setIsVideoPlaying(true)}
+                                    className="absolute inset-0 flex items-center justify-center"
+                                    aria-label="Play video"
                                 >
-                                    <path d="M8 5v14l11-7z" />
-                                </svg>
-                            </div>
-                        </a>
+                                    <div className="bg-white p-4 rounded-full shadow-md hover:scale-110 transition-transform">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                            className="w-10 h-10 text-blue-500"
+                                        >
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                    </div>
+                                </button>
+                            </>
+                        ) : (
+                            <iframe
+                                className="h-[563px] w-[1000px]"
+                                src="https://www.youtube.com/embed/BCqJCOWUc-Q?autoplay=1&mute=1&rel=0&playsinline=1"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            />
+                        )}
                     </div>
                 </div>
 
@@ -142,7 +155,7 @@ export default function RescuePage() {
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         {["Browse pet profiles", "Join & message with Guardians", "Make a meet-up", "Make a Legal Pet Adoption"].map((title, i) => (
                             <div key={i} className="text-center w-[270px]">
-                                <h3 className="text-xl font-semibold text-blue-600 mb-2">
+                                <h3 className="text-xl font-semibold text-primary mb-2">
                                     {`0${i + 1}.`}
                                 </h3>
                                 <p className="font-semibold mb-2">{title}</p>
