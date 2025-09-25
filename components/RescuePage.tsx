@@ -23,7 +23,7 @@ export default function RescuePage() {
 
     return (
         <div className="">
-            <div className="max-w-[1640px] px-8 my-8 md:my-16 mx-auto mt-[500px]">
+            <div className="max-w-[1640px] px-8 my-8 md:my-16 mx-auto">
                 {/* Header Section */}
                 <div className="flex flex-col md:flex-row items-center gap-8">
                     <Image
