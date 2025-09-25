@@ -101,7 +101,7 @@ export default function Testimonial() {
             modules={[Autoplay]}
             pagination={{ clickable: true }}
             spaceBetween={30}
-            slidesPerView={4}
+            slidesPerView={1}
             breakpoints={{
               640: { slidesPerView: 2 },
               1024: { slidesPerView: 4 },

@@ -25,7 +25,7 @@ export default function RescuePage() {
         <div className="">
             <div className="max-w-[1640px] px-8 my-8 md:my-16 mx-auto mt-[500px]">
                 {/* Header Section */}
-                <div className="flex flex-col md:flex-row items-center justify-evenly gap-8">
+                <div className="flex flex-col md:flex-row items-center gap-8">
                     <Image
                         src="/images/rescue/home.png"
                         alt="Logo"
@@ -154,7 +154,7 @@ export default function RescuePage() {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         {["Browse pet profiles", "Join & message with Guardians", "Make a meet-up", "Make a Legal Pet Adoption"].map((title, i) => (
-                            <div key={i} className="text-center w-[270px]">
+                            <div key={i} className="text-center">
                                 <h3 className="text-xl font-semibold text-primary mb-2">
                                     {`0${i + 1}.`}
                                 </h3>
