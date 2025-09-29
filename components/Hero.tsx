@@ -81,7 +81,7 @@ export default function Hero() {
                 Want to adopt a dog?
               </h3>
               <p className="text-gray-600 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Adopt and give a rescued dog a forever home.
               </p>
             </div>
 
@@ -99,7 +99,7 @@ export default function Hero() {
                 Need to rehome a dog?
               </h3>
               <p className="text-gray-600 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                We’ll help your dog find a safe, loving new home.
               </p>
             </div>
 
@@ -115,7 +115,7 @@ export default function Hero() {
               </div>
               <h3 className="font-semibold text-lg mb-2">Make a donation</h3>
               <p className="text-gray-600 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Your gift saves lives and supports rescued dogs.
               </p>
             </div>
           </div>

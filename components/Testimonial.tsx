@@ -1,58 +1,59 @@
-'use client'
+"use client";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const testimonials = [
   {
     id: 1,
-    text: "The first day we bought Miso home, he didn't cry at all on the car ride home. He was incredibly curious.",
+    text: "Adopting through Bully Project Rescue was seamless and heartwarming. Our new pup feels like part of the family already!",
     author: "Catherine, Los Angeles",
+    avatar: "/images/testimonial/people1.png",
   },
   {
     id: 2,
-    text: "Lorem ipsum dolor sit amet consectetur. Sed eros turpis et convallis egestas turpis.",
+    text: "The team was so supportive and caring. They matched us with the perfect dog, and the entire process felt personal and safe.",
     author: "Dany Monson, Austin, TX",
     avatar: "/images/testimonial/people1.png",
   },
   {
     id: 3,
-    text: "Lorem ipsum dolor sit amet consectetur. Sed eros turpis et convallis egestas turpis.",
+    text: "Fostering with Bully Project Rescue was a life-changing experience. I got to help dogs in need while preparing them for their forever homes.",
     author: "Cahaya Dewi, New York, NY",
     avatar: "/images/testimonial/people2.png",
   },
   {
     id: 4,
-    text: "Lorem ipsum dolor sit amet consectetur. Sed eros turpis et convallis egestas turpis.",
+    text: "We couldn’t be happier with our adoption. The dog was healthy, happy, and ready to love. Thank you, Bully Project Rescue!",
     author: "Sacha Dubois, Los Angeles, LA",
     avatar: "/images/testimonial/people3.png",
   },
-  {
-    id: 5,
-    text: "Lorem ipsum dolor sit amet consectetur. Sed eros turpis et convallis egestas turpis.",
-    author: "Pavlyuchenko, California, CA",
-    avatar: "/images/testimonial/people4.png",
-  },
-  {
-    id: 6,
-    text: "Lorem ipsum dolor sit amet consectetur. Sed eros turpis et convallis egestas turpis.",
-    author: "Cahaya Dewi, New York, NY",
-    avatar: "/images/testimonial/people2.png",
-  },
-  {
-    id: 7,
-    text: "Lorem ipsum dolor sit amet consectetur. Sed eros turpis et convallis egestas turpis.",
-    author: "Sacha Dubois, Los Angeles, LA",
-    avatar: "/images/testimonial/people3.png",
-  },
-  {
-    id: 8,
-    text: "Lorem ipsum dolor sit amet consectetur. Sed eros turpis et convallis egestas turpis.",
-    author: "Pavlyuchenko, California, CA",
-    avatar: "/images/testimonial/people4.png",
-  },
+  // {
+  //   id: 5,
+  //   text: "We couldn’t be happier with our adoption. The dog was healthy, happy, and ready to love. Thank you, Bully Project Rescue!",
+  //   author: "Pavlyuchenko, California, CA",
+  //   avatar: "/images/testimonial/people4.png",
+  // },
+  // {
+  //   id: 6,
+  //   text: "Lorem ipsum dolor sit amet consectetur. Sed eros turpis et convallis egestas turpis.",
+  //   author: "Cahaya Dewi, New York, NY",
+  //   avatar: "/images/testimonial/people2.png",
+  // },
+  // {
+  //   id: 7,
+  //   text: "Lorem ipsum dolor sit amet consectetur. Sed eros turpis et convallis egestas turpis.",
+  //   author: "Sacha Dubois, Los Angeles, LA",
+  //   avatar: "/images/testimonial/people3.png",
+  // },
+  // {
+  //   id: 8,
+  //   text: "Lorem ipsum dolor sit amet consectetur. Sed eros turpis et convallis egestas turpis.",
+  //   author: "Pavlyuchenko, California, CA",
+  //   avatar: "/images/testimonial/people4.png",
+  // },
 ];
 
 export default function Testimonial() {
@@ -62,12 +63,9 @@ export default function Testimonial() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Text Section */}
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              Testimonial
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Testimonial</h2>
             <p className="text-gray-600 mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis.
+              Hear from families who’ve found their perfect furry companions.
             </p>
 
             <div className="bg-white shadow-lg p-6 rounded-xl relative max-w-md  left-0 md:left-[80%]">
@@ -75,10 +73,11 @@ export default function Testimonial() {
                 💬
               </div>
               <p className="italic text-gray-700 mb-4">
-                “{testimonials[0].text}”
+                “The first day we bought Miso home, he did’nt cry at all on the
+                car ride home. He was incredibely curious.”
               </p>
               <p className="font-semibold text-gray-900">
-                {testimonials[0].author}
+                Catherine, Los Angeles
               </p>
             </div>
           </div>
@@ -107,7 +106,7 @@ export default function Testimonial() {
               1024: { slidesPerView: 4 },
             }}
           >
-            {testimonials.slice(1).map((t) => (
+            {testimonials.map((t) => (
               <SwiperSlide key={t.id}>
                 <div className="text-center h-full flex flex-col justify-between">
                   <p className="text-gray-600 mb-4">“{t.text}”</p>
