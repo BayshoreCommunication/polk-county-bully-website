@@ -6,7 +6,7 @@ export default function HowWeStarted() {
         {/* Left Image */}
         <div>
           <Image
-            src="/images/howwestarted/left.png"
+            src="/images/howwe/left.png"
             alt="Rescue Dog"
             width={1000}
             height={800}
@@ -25,7 +25,7 @@ export default function HowWeStarted() {
           </p>
           <div className="mt-6">
             <Image
-              src="/images/howwestarted/right.png"
+              src="/images/howwe/right.png"
               alt="Bully Project Rescue Founders"
               width={1000}
               height={800}
