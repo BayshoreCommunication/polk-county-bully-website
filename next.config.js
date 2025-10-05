@@ -2,7 +2,10 @@
 const nextConfig = {
   images: {
     unoptimized: true, // Move this outside the remotePatterns array
-    domains: ["localhost"],
+    domains: [
+      "localhost",
+      // "bullyprojectrescue.org", //  added
+    ],
     remotePatterns: [
       {
         protocol: "https",
