@@ -70,7 +70,7 @@ export default function RescuePage() {
                     alt="Logo"
                     width={1000}
                     height={800}
-                    className="h-8 w-auto"
+                    className="h-auto w-8"
                   />
                 </div>
                 <div>
@@ -88,7 +88,7 @@ export default function RescuePage() {
                     alt="Logo"
                     width={1000}
                     height={800}
-                    className="h-8 w-auto"
+                    className="h-auto w-8"
                   />
                 </div>
                 <div>
