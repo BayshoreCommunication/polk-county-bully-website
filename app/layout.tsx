@@ -3,8 +3,8 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { Nunito } from 'next/font/google';
 import { Inter } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer"
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer"
 
 const nunito = Nunito({
   subsets: ["latin"],

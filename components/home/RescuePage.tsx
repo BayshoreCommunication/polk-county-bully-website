@@ -106,7 +106,7 @@ export default function RescuePage() {
         {/* Counter Section */}
         <div
           id="counter-section"
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center my-12 bg-gray-50 p-12"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center my-12 bg-[#F5F9FA] p-12"
         >
           <div>
             <h3 className="text-3xl md:text-5xl font-bold text-[#2E3B4B]">

@@ -8,6 +8,9 @@ import { IoIosArrowDown } from "react-icons/io";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [openAdoption, setOpenAdoption] = useState(false);
+  const [openContact, setOpenContact] = useState(false);
+  const [openDonate, setOpenDonate] = useState(false);
 
   return (
     <nav className="w-full ">
@@ -28,10 +31,10 @@ export default function Navbar() {
           <Link href="/" className="text-primary font-medium">
             Home
           </Link>
-          <Link href="/" className=" font-medium">
+          <Link href="/about" className=" font-medium">
             About Us
           </Link>
-          <Link href="/" className=" font-medium">
+          <Link href="/learn" className=" font-medium">
             Learn
           </Link>
           <div className="relative group">
@@ -123,49 +126,89 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Dropdown (mirrors desktop with collapsible groups) */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-md border-t border-gray-100">
           <div className="px-8 py-4 flex flex-col space-y-4">
-            <Link href="/" className="text-primary font-medium">
+            <Link href="/" className="text-primary font-medium" onClick={() => setIsOpen(false)}>
               Home
             </Link>
-            <Link href="/about" className="font-medium">About Us</Link>
-            <Link href="/learn" className="font-medium">Learn</Link>
-            
-            {/* Mobile Adoption Dropdown */}
-            <div className="ml-4 space-y-2">
-              <Link href="/adoptionapplication" className="block text-gray-600 hover:text-primary">
-                Adoption Application
-              </Link>
-              <Link href="/fosterapplication" className="block text-gray-600 hover:text-primary">
-                Foster Application
-              </Link>
-            </div>
-            
-            {/* Mobile Contact Dropdown */}
-            <div className="ml-4 space-y-2">
-              <Link href="/faq" className="block text-gray-600 hover:text-primary">
-                FAQ
-              </Link>
-              <Link href="/contact" className="block text-gray-600 hover:text-primary">
-                Contact Us
-              </Link>
-            </div>
-            
-            {/* Mobile Donate Dropdown */}
-            <div className="ml-4 space-y-2">
-              <Link href="/donate" className="block text-gray-600 hover:text-primary">
-                Make a Donation
-              </Link>
-              <Link href="/volunteer" className="block text-gray-600 hover:text-primary">
-                Volunteer
-              </Link>
-            </div>
-            
+            <Link href="/about" className="font-medium" onClick={() => setIsOpen(false)}>About Us</Link>
+            <Link href="/learn" className="font-medium" onClick={() => setIsOpen(false)}>Learn</Link>
+
+            {/* Adoption group */}
+            <button
+              className="flex items-center justify-between w-full text-left font-medium"
+              onClick={() => setOpenAdoption(!openAdoption)}
+              aria-expanded={openAdoption}
+            >
+              <Link href="/adoption" onClick={() => setIsOpen(false)}>Adoption</Link>
+              <IoIosArrowDown className={`transition-transform ${openAdoption ? "rotate-180" : "rotate-0"}`} />
+            </button>
+            {openAdoption && (
+              <div className="ml-4 space-y-2">
+                <Link href="/adoptionapplication" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                  Adoption Application
+                </Link>
+                <Link href="/fosterapplication" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                  Foster Application
+                </Link>
+              </div>
+            )}
+
+            {/* Contact group */}
+            <button
+              className="flex items-center justify-between w-full text-left font-medium"
+              onClick={() => setOpenContact(!openContact)}
+              aria-expanded={openContact}
+            >
+              <span>Contact</span>
+              <IoIosArrowDown className={`transition-transform ${openContact ? "rotate-180" : "rotate-0"}`} />
+            </button>
+            {openContact && (
+              <div className="ml-4 space-y-2">
+                <Link href="/volunteer_application" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                  Volunteer Application
+                </Link>
+                <Link href="/volunteer_calendar" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                  Volunteer Calendar
+                </Link>
+                <Link href="/volunteer_calendar" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                  Other Links
+                </Link>
+              </div>
+            )}
+
+            {/* Donate group */}
+            <button
+              className="flex items-center justify-between w-full text-left font-medium"
+              onClick={() => setOpenDonate(!openDonate)}
+              aria-expanded={openDonate}
+            >
+              <span>Donate</span>
+              <IoIosArrowDown className={`transition-transform ${openDonate ? "rotate-180" : "rotate-0"}`} />
+            </button>
+            {openDonate && (
+              <div className="ml-4 space-y-2">
+                <Link href="/donate" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                  One-Time Donations
+                </Link>
+                <Link href="/venmo" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                  Venmo
+                </Link>
+                <Link href="/paypal" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                  Paypal
+                </Link>
+                <Link href="/cash_app" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                  Cash App
+                </Link>
+              </div>
+            )}
+
             <Link
               href="/adopt"
               className="flex items-center gap-2 bg-sky-500 text-white px-4 py-2 rounded-md font-medium hover:bg-sky-600 transition"
+              onClick={() => setIsOpen(false)}
             >
               <Image
                 src="/images/navbar/paw.png"
