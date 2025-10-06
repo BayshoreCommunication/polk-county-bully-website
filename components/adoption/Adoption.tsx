@@ -7,7 +7,7 @@ export default function Adoption() {
     <main className="bg-[#F5F9FA]">
         <section className="max-w-[1640px] px-8 mx-auto flex flex-col md:flex-row items-center justify-between py-12">
       {/* Left Content */}
-      <div className="text-left mb-8 md:mb-0">
+      <div className="text-left mb-8  md:mb-0">
         <h1 className="text-3xl md:text-5xl font-bold text-[#2a3b47] mb-3">
         Adoption
         </h1>
