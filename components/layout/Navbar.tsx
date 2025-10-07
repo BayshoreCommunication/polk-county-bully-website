@@ -28,78 +28,6 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop Menu */}
-        {/* <div className="hidden md:flex items-center space-x-8">
-          <Link href="/" className="text-primary font-medium">
-            Home
-          </Link>
-          <Link href="/about" className=" font-medium">
-            About Us
-          </Link>
-          <Link href="/learn" className=" font-medium">
-            Learn
-          </Link>
-          <div className="relative group">
-            <button className="flex items-center space-x-1 hover:text-primary font-medium ">
-              <span>Adoption</span>
-              <span className="text-xs"><IoIosArrowDown /></span>
-            </button>
-            <div className="border-t-2 border-primary absolute left-0 top-full hidden group-hover:block bg-white shadow-lg mt-0 rounded-lg lg:rounded-xl z-50 min-w-[200px] transition-all duration-200 ease-out">
-              <div className="pt-2">
-                <Link href="/adoptionapplication" className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">
-                  Adoption Application
-                </Link>
-                <Link href="/fosterapplication" className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">
-                  Foster Application
-                </Link>
-              </div>
-            </div>
-          </div>
-          
-          
-          <div className="relative group">
-            <button className="flex items-center space-x-1 hover:text-primary font-medium">
-              <span>Contact</span>
-              <span className="text-xs"><IoIosArrowDown /></span>
-            </button>
-            <div className="border-t-2 border-primary absolute left-0 top-full hidden group-hover:block bg-white shadow-lg mt-0 rounded-lg z-50 min-w-[200px] transition-all duration-200 ease-out">
-              <div className="pt-2">
-                <Link href="/volunteer_application" className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">
-                Volunteer Application
-                </Link>
-                <Link href="/volunteer_calendar" className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">
-                Volunteer Calendar
-                </Link>
-                <Link href="/volunteer_calendar" className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">
-                Other Links
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="relative group">
-            <button className="flex items-center space-x-1 hover:text-primary font-medium">
-              <span>Donate</span>
-              <span className="text-xs"><IoIosArrowDown /></span>
-            </button>
-            <div className="border-t-2 border-primary absolute left-0 top-full hidden group-hover:block bg-white shadow-lg mt-0 rounded-lg z-50 min-w-[200px] transition-all duration-200 ease-out">
-              <div className="pt-2">
-                <Link href="/donate" className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">
-                  One-Time Donations
-                </Link>
-                <Link href="/venmo" className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">
-                  Venmo
-                </Link>
-                <Link href="/paypal" className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">
-                  Paypal
-                </Link>
-                <Link href="/cash_app" className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">
-                  Cash App
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
         <div className="hidden md:flex items-center space-x-8">
           <Link
             href="/"
@@ -320,14 +248,14 @@ export default function Navbar() {
             {openAdoption && (
               <div className="ml-4 space-y-2">
                 <Link
-                  href="/adoptionapplication"
+                  href="https://petstablished.com/adoptions/personal-information?application_type=Adopt&donation_section=false&form_id=24575&form_type=generic&generic_form_id=24575&pet_id=715879&section=1&selected_pets=false"
                   className="block text-gray-600 hover:text-primary"
                   onClick={() => setIsOpen(false)}
                 >
                   Adoption Application
                 </Link>
                 <Link
-                  href="/fosterapplication"
+                  href="https://petstablished.com/adoptions/personal-information?application_type=Foster&donation_section=false&form_id=24574&form_type=generic&generic_form_id=24574&pet_id=715879&section=1&selected_pets=false"
                   className="block text-gray-600 hover:text-primary"
                   onClick={() => setIsOpen(false)}
                 >
@@ -352,21 +280,21 @@ export default function Navbar() {
             {openContact && (
               <div className="ml-4 space-y-2">
                 <Link
-                  href="/volunteer_application"
+                  href="https://www.giveffect.com/charities/27544-polk-county-bully-project/volunteer_application"
                   className="block text-gray-600 hover:text-primary"
                   onClick={() => setIsOpen(false)}
                 >
                   Volunteer Application
                 </Link>
                 <Link
-                  href="/volunteer_calendar"
+                  href="https://www.giveffect.com/charities/27544-polk-county-bully-project/volunteer"
                   className="block text-gray-600 hover:text-primary"
                   onClick={() => setIsOpen(false)}
                 >
                   Volunteer Calendar
                 </Link>
                 <Link
-                  href="/volunteer_calendar"
+                  href="https://linktr.ee/PolkCountyBullyProject"
                   className="block text-gray-600 hover:text-primary"
                   onClick={() => setIsOpen(false)}
                 >
@@ -391,28 +319,28 @@ export default function Navbar() {
             {openDonate && (
               <div className="ml-4 space-y-2">
                 <Link
-                  href="/donate"
+                  href="https://app.giveffect.com/charities/27544-polk-county-bully-project"
                   className="block text-gray-600 hover:text-primary"
                   onClick={() => setIsOpen(false)}
                 >
                   One-Time Donations
                 </Link>
                 <Link
-                  href="/venmo"
+                  href="https://account.venmo.com/u/Polkcountybullyproject"
                   className="block text-gray-600 hover:text-primary"
                   onClick={() => setIsOpen(false)}
                 >
                   Venmo
                 </Link>
                 <Link
-                  href="/paypal"
+                  href="https://www.paypal.com/paypalme/PolkCountyBullyProje"
                   className="block text-gray-600 hover:text-primary"
                   onClick={() => setIsOpen(false)}
                 >
                   Paypal
                 </Link>
                 <Link
-                  href="/cash_app"
+                  href="https://cash.app/$pcbp"
                   className="block text-gray-600 hover:text-primary"
                   onClick={() => setIsOpen(false)}
                 >
