@@ -120,9 +120,9 @@ export default function Testimonial() {
             {testimonials.map((t) => (
               <SwiperSlide key={t.id}>
                 <div className="text-center h-full flex flex-col justify-between">
-                <Reveal y={20} opacityFrom={0}>
+                
                   <p className="text-gray-600 mb-4">“{t.text}”</p>
-                  </Reveal>
+                 
                   <div className="flex items-center justify-center gap-3 mt-auto">
                     {t.avatar && (
                       <Image

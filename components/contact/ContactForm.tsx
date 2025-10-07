@@ -1,26 +1,32 @@
 "use client";
-
 import Image from "next/image";
 import { FaMapMarkerAlt, FaEnvelope, FaPhone } from "react-icons/fa";
+import Reveal from "@/components/motion/Reveal";
+import Stagger from "@/components/motion/Stagger";
 
 export default function ContactForm() {
   return (
     <section className="max-w-[1640px] px-8 py-8 md:py-16 mx-auto">
       {/* ===== Header ===== */}
       <div className="text-center mb-12">
+      <Reveal y={20} opacityFrom={0}>
         <h2 className="text-3xl md:text-5xl font-bold text-[#2a3b47] mb-3">
           Polk County Bully Project Contact Form
         </h2>
+        </Reveal>
+        <Reveal y={30} opacityFrom={0}>
         <p className="text-gray-600 max-w-5xl mx-auto text-sm md:text-base">
           Interested in learning more about our project or one of our awesome pups? 
           Contact us here and we’ll respond as soon as we can.
         </p>
+        </Reveal>
       </div>
 
       {/* ===== Contact Grid ===== */}
       <div className="grid grid-cols-1 md:grid-cols-10 gap-10 md:items-stretch">
         {/* ===== Left Side: Contact Info ===== */}
         <div className="md:col-span-3 flex flex-col justify-between space-y-6">
+        <Reveal y={20} opacityFrom={0}>
           <div className="flex items-start space-x-4 bg-white p-6 rounded-xl shadow">
             <div className="flex items-center justify-center w-10 h-10 bg-blue-100 text-black rounded-lg">
               <FaMapMarkerAlt size={18} />
@@ -32,7 +38,9 @@ export default function ContactForm() {
               </p>
             </div>
           </div>
+          </Reveal>
 
+          <Reveal y={25} opacityFrom={0}>
           <div className="flex items-start space-x-4 bg-white p-6 rounded-xl shadow">
             <div className="flex items-center justify-center w-10 h-10 bg-blue-100 text-black rounded-lg">
               <FaEnvelope size={18} />
@@ -43,7 +51,9 @@ export default function ContactForm() {
               support@bullyprojectrescue.com              </p>
             </div>
           </div>
+          </Reveal>
 
+          <Reveal y={30} opacityFrom={0}>
           <div className="flex items-start space-x-4 bg-white p-6 rounded-xl shadow">
             <div className="flex items-center justify-center w-10 h-10 bg-blue-100 text-black rounded-lg">
               <FaPhone size={18} />
@@ -53,6 +63,7 @@ export default function ContactForm() {
               <p className="text-gray-600 text-sm">+1 863-816-6995</p>
             </div>
           </div>
+          </Reveal>
         </div>
 
         {/* ===== Right Side: Form ===== */}
