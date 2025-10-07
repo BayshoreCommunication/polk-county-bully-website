@@ -120,7 +120,7 @@ export default function RescuePage() {
         {/* How It Works Section */}
         <div className="mt-16 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">How it works?</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+          <p className="text-gray-600 max-w-8xl mx-auto mb-12">
             At Bully Project Rescue, we carefully rescue dogs in need, providing
             medical care, vaccinations, and spay/neuter services. Each dog
             enters a foster home where they receive love, training, and

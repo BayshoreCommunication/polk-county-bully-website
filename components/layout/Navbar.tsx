@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, PawPrint } from "lucide-react"; // icons
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -11,6 +12,7 @@ export default function Navbar() {
   const [openAdoption, setOpenAdoption] = useState(false);
   const [openContact, setOpenContact] = useState(false);
   const [openDonate, setOpenDonate] = useState(false);
+  const pathname = usePathname();
 
   return (
     <nav className="w-full ">
@@ -99,30 +101,38 @@ export default function Navbar() {
         </div> */}
 
         <div className="hidden md:flex items-center space-x-8">
-          <Link
-            href="/"
-            className="text-primary font-medium hover:text-primary transition-colors"
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="font-medium hover:text-primary transition-colors"
-          >
-            About Us
-          </Link>
-          <Link
-            href="/learn"
-            className="font-medium hover:text-primary transition-colors"
-          >
-            Learn
-          </Link>
+           <Link
+             href="/"
+             className={`font-medium hover:text-primary transition-colors ${
+               pathname === "/" ? "text-primary" : ""
+             }`}
+           >
+             Home
+           </Link>
+           <Link
+             href="/about"
+             className={`font-medium hover:text-primary transition-colors ${
+               pathname === "/about" ? "text-primary" : ""
+             }`}
+           >
+             About Us
+           </Link>
+           <Link
+             href="/learn"
+             className={`font-medium hover:text-primary transition-colors ${
+               pathname === "/learn" ? "text-primary" : ""
+             }`}
+           >
+             Learn
+           </Link>
 
           {/* Adoption Dropdown */}
           <div className="relative group">
             <Link
               href="/adoption"
-              className="flex items-center space-x-1 font-medium hover:text-primary transition-colors"
+              className={`flex items-center space-x-1 font-medium hover:text-primary transition-colors ${
+                pathname === "/adoption" ? "text-primary" : ""
+              }`}
             >
               <span>Adoption</span>
               <span className="text-xs">
@@ -151,7 +161,9 @@ export default function Navbar() {
           <div className="relative group">
             <Link
               href="/contact"
-              className="flex items-center space-x-1 font-medium hover:text-primary transition-colors"
+              className={`flex items-center space-x-1 font-medium hover:text-primary transition-colors ${
+                pathname === "/contact" ? "text-primary" : ""
+              }`}
             >
               <span>Contact</span>
               <span className="text-xs">
@@ -186,7 +198,9 @@ export default function Navbar() {
           <div className="relative group">
             <Link
               href="/donate"
-              className="flex items-center space-x-1 font-medium hover:text-primary transition-colors"
+              className={`flex items-center space-x-1 font-medium hover:text-primary transition-colors ${
+                pathname === "/donate" ? "text-primary" : ""
+              }`}
             >
               <span>Donate</span>
               <span className="text-xs">
@@ -256,27 +270,33 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white shadow-md border-t border-gray-100">
           <div className="px-8 py-4 flex flex-col space-y-4">
-            <Link
-              href="/"
-              className="text-primary font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              About Us
-            </Link>
-            <Link
-              href="/learn"
-              className="font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Learn
-            </Link>
+             <Link
+               href="/"
+               className={`font-medium ${
+                 pathname === "/" ? "text-primary" : ""
+               }`}
+               onClick={() => setIsOpen(false)}
+             >
+               Home
+             </Link>
+             <Link
+               href="/about"
+               className={`font-medium ${
+                 pathname === "/about" ? "text-primary" : ""
+               }`}
+               onClick={() => setIsOpen(false)}
+             >
+               About Us
+             </Link>
+             <Link
+               href="/learn"
+               className={`font-medium ${
+                 pathname === "/learn" ? "text-primary" : ""
+               }`}
+               onClick={() => setIsOpen(false)}
+             >
+               Learn
+             </Link>
 
             {/* Adoption group */}
             <button
@@ -284,9 +304,15 @@ export default function Navbar() {
               onClick={() => setOpenAdoption(!openAdoption)}
               aria-expanded={openAdoption}
             >
-              <Link href="/adoption" onClick={() => setIsOpen(false)}>
-                Adoption
-              </Link>
+               <Link 
+                 href="/adoption" 
+                 className={`${
+                   pathname === "/adoption" ? "text-primary" : ""
+                 }`}
+                 onClick={() => setIsOpen(false)}
+               >
+                 Adoption
+               </Link>
               <IoIosArrowDown
                 className={`transition-transform ${
                   openAdoption ? "rotate-180" : "rotate-0"

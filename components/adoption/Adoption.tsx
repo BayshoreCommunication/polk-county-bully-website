@@ -28,7 +28,7 @@ export default function Adoption() {
       {/* Right Image */}
       <div className="relative w-full md:w-1/2 lg:w-[500px] xl:w-[550px] h-[200px] md:h-[300px] lg:h-[350px]">
         <Image
-          src="images/aboutpage/about/bg.png"
+          src="images/adoptionpage/adoption/bg.png"
           alt="About Us Illustration"
           width={1000}
           height={800}

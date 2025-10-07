@@ -28,7 +28,7 @@ export default function AboutPitBulls() {
               alt="Pit bull playing with tennis ball"
               width={1000}
               height={800}
-              className="object-cover w-full h-full"
+              className="object-cover object-top w-full h-full"
               priority
             />
           </div>
@@ -40,7 +40,7 @@ export default function AboutPitBulls() {
               alt="Bulldog close up"
               width={1000}
               height={800}
-              className="object-cover w-full h-full"
+              className="object-cover object-top w-full h-full"
             />
           </div>
 
