@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import CountUp from "react-countup";
+import Reveal from "@/components/motion/Reveal";
+import Stagger from "@/components/motion/Stagger";
 
 const howItWorksSteps = [
   {

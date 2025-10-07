@@ -19,7 +19,7 @@ export default function Footer() {
               donate to save a life today.
             </p>
             <p className="font-bold text-lg text-primary flex items-center gap-2">
-              <span className="text-xl">📞</span> 863-816-6995
+              <span className="text-xl">📞</span> (913) 756-3126
             </p>
             <p className="text-sm text-gray-600">Got Questions? Call us 24/7</p>
           </div>

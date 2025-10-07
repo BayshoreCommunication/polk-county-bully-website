@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Reveal from "@/components/motion/Reveal";
+import Stagger from "@/components/motion/Stagger";
 
 export default function Hero() {
   return (
@@ -9,6 +11,7 @@ export default function Hero() {
           {/* Left Dog */}
           <div className="flex-1 flex justify-center">
             <div className="">
+            <Reveal y={30} opacityFrom={0}>
               <Image
                 src="/images/hero/left.png"
                 alt="Dog 1"
@@ -16,14 +19,19 @@ export default function Hero() {
                 height={900}
                 className="w-full h-auto"
               />
+              </Reveal>
             </div>
           </div>
 
           {/* Text Content */}
           <div className="flex-1 text-center md:text-center">
+          <Stagger>
+          <Reveal y={20} opacityFrom={0}>
             <h1 className="text-3xl md:text-5xl font-bold mb-4">
               Every dog deserves to be in a loving home
             </h1>
+            </Reveal>
+            <Reveal y={15} opacityFrom={0}>
             <p className="text-gray-600 mb-6 max-w-xl mx-auto">
               At the Bully Project Rescue in Polk county, we believe that we can
               end breed discrimination and cruelty by working together through
@@ -31,6 +39,7 @@ export default function Hero() {
               foster, donate or volunteer, you can make a difference for Pit
               Bulls and all Bully Breed dogs in Polk County, Florida.
             </p>
+            </Reveal>
             <div className="flex flex-col md:flex-row items-center justify-center gap-6">
               <button className="bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-sky-600 transition w-full">
                 Contact Us
@@ -48,11 +57,13 @@ export default function Hero() {
                 <span className="block">Explore More</span>
               </button>
             </div>
+            </Stagger>
           </div>
 
           {/* Right Dog */}
           <div className="flex-1 flex justify-center">
             <div className="relative">
+            <Reveal y={30} opacityFrom={0}>
               <Image
                 src="/images/hero/right.png"
                 alt="Dog 2"
@@ -60,6 +71,7 @@ export default function Hero() {
                 height={580}
                 className="relative z-10 w-[400px] h-auto"
               />
+              </Reveal>
             </div>
           </div>
         </section>
@@ -67,6 +79,8 @@ export default function Hero() {
         {/* Floating Info Cards */}
         <section className=" lg:absolute mt-6 md:mt-0 left-0 right-0 -bottom-[30%] z-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6  bg-white  shadow-medium rounded-2xl p-6 lg:p-10 text-center transition max-w-5xl mx-auto">
+          <Stagger>
+          <Reveal y={20} opacityFrom={0}>
             <div className="">
               <div className="flex justify-center mb-4 text-3xl text-yellow-500">
                 <Image
@@ -84,7 +98,9 @@ export default function Hero() {
                 Adopt and give a rescued dog a forever home.
               </p>
             </div>
-
+            </Reveal>
+            
+            <Reveal y={25} opacityFrom={0}>
             <div className="">
               <div className="flex justify-center mb-4 text-3xl text-green-500 ">
                 <Image
@@ -102,7 +118,10 @@ export default function Hero() {
                 We’ll help your dog find a safe, loving new home.
               </p>
             </div>
+            </Reveal>
 
+
+            <Reveal y={30} opacityFrom={0}>
             <div className="">
               <div className="flex justify-center mb-4 text-3xl text-indigo-500">
                 <Image
@@ -118,6 +137,8 @@ export default function Hero() {
                 Your gift saves lives and supports rescued dogs.
               </p>
             </div>
+            </Reveal>
+            </Stagger>
           </div>
         </section>
       </div>
