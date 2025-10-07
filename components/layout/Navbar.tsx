@@ -142,13 +142,13 @@ export default function Navbar() {
             <div className="border-t-2 border-primary absolute left-0 top-full hidden group-hover:block bg-white shadow-lg mt-0 rounded-lg z-50 min-w-[200px] transition-all duration-200 ease-out">
               <div className="pt-2">
                 <Link
-                  href="/adoptionapplication"
+                  href="https://petstablished.com/adoptions/personal-information?application_type=Adopt&donation_section=false&form_id=24575&form_type=generic&generic_form_id=24575&pet_id=715879&section=1&selected_pets=false"
                   className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
                 >
                   Adoption Application
                 </Link>
                 <Link
-                  href="/fosterapplication"
+                  href="https://petstablished.com/adoptions/personal-information?application_type=Foster&donation_section=false&form_id=24574&form_type=generic&generic_form_id=24574&pet_id=715879&section=1&selected_pets=false"
                   className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
                 >
                   Foster Application
@@ -173,19 +173,19 @@ export default function Navbar() {
             <div className="border-t-2 border-primary absolute left-0 top-full hidden group-hover:block bg-white shadow-lg mt-0 rounded-lg z-50 min-w-[200px] transition-all duration-200 ease-out">
               <div className="pt-2">
                 <Link
-                  href="/volunteer_application"
+                  href="https://www.giveffect.com/charities/27544-polk-county-bully-project/volunteer_application"
                   className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
                 >
                   Volunteer Application
                 </Link>
                 <Link
-                  href="/volunteer_calendar"
+                  href="https://www.giveffect.com/charities/27544-polk-county-bully-project/volunteer"
                   className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
                 >
                   Volunteer Calendar
                 </Link>
                 <Link
-                  href="/other_links"
+                  href="https://linktr.ee/PolkCountyBullyProject"
                   className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
                 >
                   Other Links
@@ -210,25 +210,25 @@ export default function Navbar() {
             <div className="border-t-2 border-primary absolute left-0 top-full hidden group-hover:block bg-white shadow-lg mt-0 rounded-lg z-50 min-w-[200px] transition-all duration-200 ease-out">
               <div className="pt-2">
                 <Link
-                  href="/donate"
+                  href="https://app.giveffect.com/charities/27544-polk-county-bully-project"
                   className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
                 >
                   One-Time Donations
                 </Link>
                 <Link
-                  href="/venmo"
+                  href="https://account.venmo.com/u/Polkcountybullyproject"
                   className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
                 >
                   Venmo
                 </Link>
                 <Link
-                  href="/paypal"
+                  href="https://www.paypal.com/paypalme/PolkCountyBullyProje"
                   className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
                 >
                   Paypal
                 </Link>
                 <Link
-                  href="/cash_app"
+                  href="https://cash.app/$pcbp"
                   className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
                 >
                   Cash App
