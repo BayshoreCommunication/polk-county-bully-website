@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full ">
-      <div className="max-w-[1640px] mx-auto px-8 flex items-center justify-between py-3 border-b border-gray-200">
+      <div className="max-w-[1640px] mx-auto px-8 flex items-center justify-between py-3 border-b border-gray-200 fixed top-0 bg-white z-50 left-0 right-0">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
@@ -196,7 +196,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown (mirrors desktop with collapsible groups) */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-md border-t border-gray-100">
+        <div className="md:hidden fixed left-0 right-0 top-[120px] z-40 bg-white shadow-md border-t border-gray-100 max-h-[80vh] overflow-auto">
           <div className="px-8 py-4 flex flex-col space-y-4">
             <Link
               href="/"

@@ -20,10 +20,12 @@ const inter = Inter({
 });
 
 
+
+
 export const metadata: Metadata = {
   title: "Polk County Bully",
   description: "polk-county-bully website",
-  // metadataBase: new URL(""),
+  metadataBase: new URL("https://polk-county-bully-website.vercel.app/"),
   alternates: {
     canonical: "/",
     languages: {
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    images: "/", //opengraph-image.png
+    images: "/opengraph-image.png",
   },
 };
 

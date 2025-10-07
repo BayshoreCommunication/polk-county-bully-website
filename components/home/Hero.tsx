@@ -1,9 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Reveal from "@/components/motion/Reveal";
 import Stagger from "@/components/motion/Stagger";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Hero() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <main className="max-w-[1640px] px-8 mb-8 md:mb-16  mx-auto">
       {/* Hero Section */}
@@ -42,10 +47,29 @@ export default function Hero() {
             </p>
             </Reveal>
             <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-              <Link href="/contact" className="bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-sky-600 transition w-full">
+              {/* <Link href="/contact" className="bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-sky-600 transition w-full">
                 Contact Us
-              </Link>
-              <button className="flex items-center gap-2  w-full   text-primary rounded-md font-semibold transition">
+              </Link> */}
+              <Link
+           href="/contact"
+            className="flex justify-center  items-center gap-2 bg-primary text-white px-5 py-2 rounded-md font-medium hover:bg-sky-600 transition max-w-[160px] w-full"
+          >
+            {/* <PawPrint className="w-4 h-4" /> */}
+            <Image
+              src="/images/navbar/paw.png"
+              alt="Logo"
+              width={20}
+              height={20}
+              className="h-auto w-auto"
+            />
+            Contact Us
+          </Link>
+              <button
+                type="button"
+                onClick={() => setIsVideoOpen(true)}
+                aria-label="Play video"
+                className="flex justify-center items-center gap-2  text-primary rounded-md font-semibold transition"
+              >
                 <span className="w-10 h-10 flex items-center justify-center">
                   <Image
                     src="/images/hero/link.png"
@@ -143,6 +167,30 @@ export default function Hero() {
           </div>
         </section>
       </div>
+
+      {/* Video Modal */}
+      {isVideoOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/60" onClick={() => setIsVideoOpen(false)} />
+          <div className="relative z-10 w-[90%] max-w-3xl aspect-video bg-black rounded-xl overflow-hidden shadow-xl">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/BCqJCOWUc-Q?autoplay=1&mute=1&rel=0&playsinline=1"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+            <button
+              type="button"
+              onClick={() => setIsVideoOpen(false)}
+              aria-label="Close video"
+              className="absolute -top-3 -right-3 bg-white text-black rounded-full w-8 h-8 shadow flex items-center justify-center"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

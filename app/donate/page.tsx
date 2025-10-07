@@ -5,11 +5,11 @@ import RescuePage from "@/components/home/RescuePage";
 
 export default function Home() {
   return (
-    <>
+    <div className="pt-[120px] md:pt-[125px]">
       <Donate />
       <YourEmpathy />
       <Donation />
       <RescuePage />
-    </>
+    </div>
   );
 }

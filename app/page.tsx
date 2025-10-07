@@ -7,15 +7,13 @@ import RescueCare from "@/components/home/RescueCare";
 
 export default function Home() {
   return (
-    <>
+    <div className="pt-[120px] md:pt-[125px]">
       <Hero />
       <EmbeddedSite />
-
       <RescueCare />
-
       <RescuePage />
       <Testimonial />
       <HowWeStarted />
-    </>
+    </div>
   );
 }

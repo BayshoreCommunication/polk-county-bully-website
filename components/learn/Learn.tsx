@@ -7,7 +7,7 @@ import Stagger from "@/components/motion/Stagger";
 export default function Learn() {
   return (
     <main className="bg-[#F5F9FA]">
-        <section className="max-w-[1640px] px-8 mx-auto flex flex-col md:flex-row items-center justify-between py-12">
+        <section className="max-w-[1640px] px-8 mx-auto flex flex-col md:flex-row items-center justify-between py-12 overflow-hidden">
       {/* Left Content */}
       <div className="text-left mb-8 md:mb-0">
       <Reveal y={20} opacityFrom={0}>
@@ -30,7 +30,7 @@ export default function Learn() {
       </div>
 
       {/* Right Image */}
-      <div className="relative w-full md:w-1/2 lg:w-[500px] xl:w-[550px] h-[200px] md:h-[300px] lg:h-[350px] overflow-hidden">
+      <div className="relative w-full md:w-1/2 lg:w-[500px] xl:w-[550px] h-[200px] md:h-[300px] lg:h-[350px] ">
       <Reveal y={30} opacityFrom={0}> 
         <Image
           src="images/learnpage/learn/bg.png"
