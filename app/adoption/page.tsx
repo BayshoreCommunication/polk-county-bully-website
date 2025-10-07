@@ -1,13 +1,13 @@
 import Adoption from "@/components/adoption/Adoption";
 import AreYouReady from "@/components/adoption/AreYouReady";
-import HowItWorks from "@/components/adoption/HowItWorks";
-
-
+import RescuePage from "@/components/home/RescuePage";
 
 export default function Home() {
-  return <>
-    <Adoption/>
-    <AreYouReady/>
-    <HowItWorks/>
-  </>;
+  return (
+    <>
+      <Adoption />
+      <AreYouReady />
+      <RescuePage />
+    </>
+  );
 }

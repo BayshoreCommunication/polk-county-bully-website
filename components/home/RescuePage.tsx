@@ -6,21 +6,25 @@ import CountUp from "react-countup";
 const howItWorksSteps = [
   {
     id: 1,
+    img: "/images/hero/shape.png",
     title: "Browse pet profiles",
     description: "Explore adoptable dogs and find your perfect companion.",
   },
   {
     id: 2,
+    img: "/images/hero/shape.png",
     title: "Join & message with Guardians",
     description: "Connect with dog guardians to learn more and ask questions.",
   },
   {
     id: 3,
+    img: "/images/hero/shape.png",
     title: "Make a meet-up",
     description: "Schedule a visit to meet your future furry friend.",
   },
   {
     id: 4,
+    img: "/images/hero/shape.png",
     title: "Make a Legal Pet Adoption",
     description: "Finalize your adoption and give a dog a forever home.",
   },
@@ -106,7 +110,7 @@ export default function RescuePage() {
         {/* Counter Section */}
         <div
           id="counter-section"
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center my-12 bg-[#F5F9FA] p-12"
+          className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 text-center mt-12 bg-[#F5F9FA] py-8 px-8 max-w-4xl w-full mx-auto rounded-tl-3xl rounded-tr-3xl justify-between"
         >
           <div>
             <h3 className="text-3xl md:text-5xl font-bold text-[#2E3B4B]">
@@ -114,12 +118,15 @@ export default function RescuePage() {
             </h3>
             <p className="text-gray-600">Dog Adopted</p>
           </div>
+
+          <div className="hidden lg:block w-[1px] h-full bg-[#D1D3D8] mx-auto"></div>
           <div>
             <h3 className="text-3xl md:text-5xl font-bold text-[#2E3B4B]">
               {inView && <CountUp end={15} duration={3} separator="," />}K+
             </h3>
             <p className="text-gray-600">Shelters & Rescues</p>
           </div>
+          <div className="hidden lg:block w-[1px] h-full bg-[#D1D3D8] mx-auto"></div>
           <div>
             <h3 className="text-3xl md:text-5xl font-bold text-[#2E3B4B]">
               {inView && <CountUp end={18} duration={3} separator="," />}+
@@ -130,7 +137,7 @@ export default function RescuePage() {
 
         {/* Video Section */}
         <div className="flex justify-center items-center">
-          <div className="relative h-auto w-[1000px]">
+          <div className="relative h-auto w-[1000px] rounded-2xl overflow-hidden shadow-lg">
             {!isVideoPlaying ? (
               <>
                 <Image
@@ -160,7 +167,7 @@ export default function RescuePage() {
               </>
             ) : (
               <iframe
-                className="h-[563px] w-[1000px]"
+                className="h-[563px] w-[1000px] "
                 src="https://www.youtube.com/embed/BCqJCOWUc-Q?autoplay=1&mute=1&rel=0&playsinline=1"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -183,10 +190,20 @@ export default function RescuePage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {howItWorksSteps.map((step) => (
-              <div key={step.id} className="text-center">
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  {`0${step.id}.`}
-                </h3>
+              <div key={step.id} className="text-center ">
+                <div className="relative  ">
+                  <h3 className="text-xl font-semibold text-primary mb-2">
+                    {`0${step.id}.`}
+                  </h3>
+                  <Image
+                    src={step?.img}
+                    alt=""
+                    width={200}
+                    height={200}
+                    className="absolute bottom-0  left-[40%] w-12"
+                  />
+                </div>
+
                 <p className="font-semibold mb-2">{step.title}</p>
                 <p className="text-gray-600 text-sm">{step.description}</p>
               </div>

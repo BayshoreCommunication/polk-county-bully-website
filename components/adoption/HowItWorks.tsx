@@ -49,7 +49,6 @@ export default function RescuePage() {
   return (
     <div className="">
       <div className="max-w-[1640px] px-8 my-8 md:mb-16 mx-auto">
-        
         {/* Counter Section */}
         <div
           id="counter-section"
@@ -128,7 +127,7 @@ export default function RescuePage() {
             works closely with adopters to ensure every match is safe and
             lasting, giving each dog the second chance they deserve.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {howItWorksSteps.map((step) => (
               <div key={step.id} className="text-center">
                 <h3 className="text-xl font-semibold text-primary mb-2">
@@ -138,7 +137,7 @@ export default function RescuePage() {
                 <p className="text-gray-600 text-sm">{step.description}</p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

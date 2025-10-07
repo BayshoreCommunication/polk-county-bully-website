@@ -6,21 +6,25 @@ import CountUp from "react-countup";
 const howItWorksSteps = [
   {
     id: 1,
+    img: "/images/hero/shape.png",
     title: "Browse pet profiles",
     description: "Explore adoptable dogs and find your perfect companion.",
   },
   {
     id: 2,
+    img: "/images/hero/shape.png",
     title: "Join & message with Guardians",
     description: "Connect with dog guardians to learn more and ask questions.",
   },
   {
     id: 3,
+    img: "/images/hero/shape.png",
     title: "Make a meet-up",
     description: "Schedule a visit to meet your future furry friend.",
   },
   {
     id: 4,
+    img: "/images/hero/shape.png",
     title: "Make a Legal Pet Adoption",
     description: "Finalize your adoption and give a dog a forever home.",
   },
@@ -49,7 +53,6 @@ export default function RescuePage() {
   return (
     <div className="">
       <div className="max-w-[1640px] px-8 my-8 md:mb-16 mx-auto">
-        
         {/* Counter Section */}
         <div
           id="counter-section"
@@ -130,11 +133,12 @@ export default function RescuePage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {howItWorksSteps.map((step) => (
-              <div key={step.id} className="text-center">
+              <div key={step?.id} className="text-center">
                 <h3 className="text-xl font-semibold text-primary mb-2">
                   {`0${step.id}.`}
+                  <Image src={step?.img} alt="" width={50} height={50} />{" "}
                 </h3>
-                <p className="font-semibold mb-2">{step.title}</p>
+                <p className="font-semibold mb-2">{step?.title}</p>
                 <p className="text-gray-600 text-sm">{step.description}</p>
               </div>
             ))}
