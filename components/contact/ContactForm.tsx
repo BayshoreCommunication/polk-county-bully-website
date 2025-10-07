@@ -48,7 +48,7 @@ export default function ContactForm() {
             <div className="text-left">
               <h4 className="font-semibold text-[#2a3b47] mb-1">Email Address</h4>
               <p className="text-gray-600 text-sm">
-              support@bullyprojectrescue.com             
+              polkcountybullyproject@gmail.com             
               </p>
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function ContactForm() {
             </div>
             <div className="text-left">
               <h4 className="font-semibold text-[#2a3b47] mb-1">Phone</h4>
-              <p className="text-gray-600 text-sm">+1 863-816-6995</p>
+              <p className="text-gray-600 text-sm">863-816-6995</p>
             </div>
           </div>
           </Reveal>

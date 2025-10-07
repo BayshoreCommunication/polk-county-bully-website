@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Reveal from "@/components/motion/Reveal";
 import Stagger from "@/components/motion/Stagger";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -41,9 +42,9 @@ export default function Hero() {
             </p>
             </Reveal>
             <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-              <button className="bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-sky-600 transition w-full">
+              <Link href="/contact" className="bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-sky-600 transition w-full">
                 Contact Us
-              </button>
+              </Link>
               <button className="flex items-center gap-2  w-full   text-primary rounded-md font-semibold transition">
                 <span className="w-10 h-10 flex items-center justify-center">
                   <Image
