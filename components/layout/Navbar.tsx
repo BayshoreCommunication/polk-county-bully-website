@@ -27,7 +27,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
+        {/* <div className="hidden md:flex items-center space-x-8">
           <Link href="/" className="text-primary font-medium">
             Home
           </Link>
@@ -96,6 +96,132 @@ export default function Navbar() {
               </div>
             </div>
           </div>
+        </div> */}
+
+        <div className="hidden md:flex items-center space-x-8">
+          <Link
+            href="/"
+            className="text-primary font-medium hover:text-primary transition-colors"
+          >
+            Home
+          </Link>
+          <Link
+            href="/about"
+            className="font-medium hover:text-primary transition-colors"
+          >
+            About Us
+          </Link>
+          <Link
+            href="/learn"
+            className="font-medium hover:text-primary transition-colors"
+          >
+            Learn
+          </Link>
+
+          {/* Adoption Dropdown */}
+          <div className="relative group">
+            <Link
+              href="/adoption"
+              className="flex items-center space-x-1 font-medium hover:text-primary transition-colors"
+            >
+              <span>Adoption</span>
+              <span className="text-xs">
+                <IoIosArrowDown />
+              </span>
+            </Link>
+            <div className="border-t-2 border-primary absolute left-0 top-full hidden group-hover:block bg-white shadow-lg mt-0 rounded-lg z-50 min-w-[200px] transition-all duration-200 ease-out">
+              <div className="pt-2">
+                <Link
+                  href="/adoptionapplication"
+                  className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
+                >
+                  Adoption Application
+                </Link>
+                <Link
+                  href="/fosterapplication"
+                  className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
+                >
+                  Foster Application
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Dropdown */}
+          <div className="relative group">
+            <Link
+              href="/contact"
+              className="flex items-center space-x-1 font-medium hover:text-primary transition-colors"
+            >
+              <span>Contact</span>
+              <span className="text-xs">
+                <IoIosArrowDown />
+              </span>
+            </Link>
+            <div className="border-t-2 border-primary absolute left-0 top-full hidden group-hover:block bg-white shadow-lg mt-0 rounded-lg z-50 min-w-[200px] transition-all duration-200 ease-out">
+              <div className="pt-2">
+                <Link
+                  href="/volunteer_application"
+                  className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
+                >
+                  Volunteer Application
+                </Link>
+                <Link
+                  href="/volunteer_calendar"
+                  className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
+                >
+                  Volunteer Calendar
+                </Link>
+                <Link
+                  href="/other_links"
+                  className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
+                >
+                  Other Links
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Donate Dropdown */}
+          <div className="relative group">
+            <Link
+              href="/donate"
+              className="flex items-center space-x-1 font-medium hover:text-primary transition-colors"
+            >
+              <span>Donate</span>
+              <span className="text-xs">
+                <IoIosArrowDown />
+              </span>
+            </Link>
+            <div className="border-t-2 border-primary absolute left-0 top-full hidden group-hover:block bg-white shadow-lg mt-0 rounded-lg z-50 min-w-[200px] transition-all duration-200 ease-out">
+              <div className="pt-2">
+                <Link
+                  href="/donate"
+                  className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
+                >
+                  One-Time Donations
+                </Link>
+                <Link
+                  href="/venmo"
+                  className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
+                >
+                  Venmo
+                </Link>
+                <Link
+                  href="/paypal"
+                  className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
+                >
+                  Paypal
+                </Link>
+                <Link
+                  href="/cash_app"
+                  className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
+                >
+                  Cash App
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Adopt Button */}
@@ -130,11 +256,27 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white shadow-md border-t border-gray-100">
           <div className="px-8 py-4 flex flex-col space-y-4">
-            <Link href="/" className="text-primary font-medium" onClick={() => setIsOpen(false)}>
+            <Link
+              href="/"
+              className="text-primary font-medium"
+              onClick={() => setIsOpen(false)}
+            >
               Home
             </Link>
-            <Link href="/about" className="font-medium" onClick={() => setIsOpen(false)}>About Us</Link>
-            <Link href="/learn" className="font-medium" onClick={() => setIsOpen(false)}>Learn</Link>
+            <Link
+              href="/about"
+              className="font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              About Us
+            </Link>
+            <Link
+              href="/learn"
+              className="font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Learn
+            </Link>
 
             {/* Adoption group */}
             <button
@@ -142,15 +284,29 @@ export default function Navbar() {
               onClick={() => setOpenAdoption(!openAdoption)}
               aria-expanded={openAdoption}
             >
-              <Link href="/adoption" onClick={() => setIsOpen(false)}>Adoption</Link>
-              <IoIosArrowDown className={`transition-transform ${openAdoption ? "rotate-180" : "rotate-0"}`} />
+              <Link href="/adoption" onClick={() => setIsOpen(false)}>
+                Adoption
+              </Link>
+              <IoIosArrowDown
+                className={`transition-transform ${
+                  openAdoption ? "rotate-180" : "rotate-0"
+                }`}
+              />
             </button>
             {openAdoption && (
               <div className="ml-4 space-y-2">
-                <Link href="/adoptionapplication" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                <Link
+                  href="/adoptionapplication"
+                  className="block text-gray-600 hover:text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
                   Adoption Application
                 </Link>
-                <Link href="/fosterapplication" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                <Link
+                  href="/fosterapplication"
+                  className="block text-gray-600 hover:text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
                   Foster Application
                 </Link>
               </div>
@@ -163,17 +319,33 @@ export default function Navbar() {
               aria-expanded={openContact}
             >
               <span>Contact</span>
-              <IoIosArrowDown className={`transition-transform ${openContact ? "rotate-180" : "rotate-0"}`} />
+              <IoIosArrowDown
+                className={`transition-transform ${
+                  openContact ? "rotate-180" : "rotate-0"
+                }`}
+              />
             </button>
             {openContact && (
               <div className="ml-4 space-y-2">
-                <Link href="/volunteer_application" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                <Link
+                  href="/volunteer_application"
+                  className="block text-gray-600 hover:text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
                   Volunteer Application
                 </Link>
-                <Link href="/volunteer_calendar" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                <Link
+                  href="/volunteer_calendar"
+                  className="block text-gray-600 hover:text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
                   Volunteer Calendar
                 </Link>
-                <Link href="/volunteer_calendar" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                <Link
+                  href="/volunteer_calendar"
+                  className="block text-gray-600 hover:text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
                   Other Links
                 </Link>
               </div>
@@ -186,20 +358,40 @@ export default function Navbar() {
               aria-expanded={openDonate}
             >
               <span>Donate</span>
-              <IoIosArrowDown className={`transition-transform ${openDonate ? "rotate-180" : "rotate-0"}`} />
+              <IoIosArrowDown
+                className={`transition-transform ${
+                  openDonate ? "rotate-180" : "rotate-0"
+                }`}
+              />
             </button>
             {openDonate && (
               <div className="ml-4 space-y-2">
-                <Link href="/donate" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                <Link
+                  href="/donate"
+                  className="block text-gray-600 hover:text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
                   One-Time Donations
                 </Link>
-                <Link href="/venmo" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                <Link
+                  href="/venmo"
+                  className="block text-gray-600 hover:text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
                   Venmo
                 </Link>
-                <Link href="/paypal" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                <Link
+                  href="/paypal"
+                  className="block text-gray-600 hover:text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
                   Paypal
                 </Link>
-                <Link href="/cash_app" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                <Link
+                  href="/cash_app"
+                  className="block text-gray-600 hover:text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
                   Cash App
                 </Link>
               </div>
