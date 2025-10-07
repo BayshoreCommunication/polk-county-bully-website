@@ -48,7 +48,8 @@ export default function ContactForm() {
             <div className="text-left">
               <h4 className="font-semibold text-[#2a3b47] mb-1">Email Address</h4>
               <p className="text-gray-600 text-sm">
-              support@bullyprojectrescue.com              </p>
+              support@bullyprojectrescue.com             
+              </p>
             </div>
           </div>
           </Reveal>

@@ -11,6 +11,7 @@ export default function Hero() {
           {/* Left Dog */}
           <div className="flex-1 flex justify-center">
             <div className="">
+            <Reveal y={30} opacityFrom={0}>
               <Image
                 src="/images/hero/left.png"
                 alt="Dog 1"
@@ -18,6 +19,7 @@ export default function Hero() {
                 height={900}
                 className="w-full h-auto"
               />
+              </Reveal>
             </div>
           </div>
 
@@ -61,6 +63,7 @@ export default function Hero() {
           {/* Right Dog */}
           <div className="flex-1 flex justify-center">
             <div className="relative">
+            <Reveal y={30} opacityFrom={0}>
               <Image
                 src="/images/hero/right.png"
                 alt="Dog 2"
@@ -68,6 +71,7 @@ export default function Hero() {
                 height={580}
                 className="relative z-10 w-[400px] h-auto"
               />
+              </Reveal>
             </div>
           </div>
         </section>
