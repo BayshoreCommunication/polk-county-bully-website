@@ -148,7 +148,7 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="self-start bg-primary text-white font-semibold py-2 px-6 rounded-lg transition duration-200 "
+            className="self-start bg-primary text-white font-semibold py-2 px-6 rounded-lg transition duration-200 mt-4"
           >
 
             <div className="flex items-center gap-3">
