@@ -28,7 +28,7 @@ export default function HowWeStarted() {
           </p>
           </Reveal>
           <Reveal y={30} opacityFrom={0}>
-          <h3 className="text-xl md:text-2xl font-semibold mb-3">How We Started</h3>
+          <h3 className="text-3xl md:text-5xl font-semibold mb-3">How We Started</h3>
           </Reveal>
           <Reveal y={30} opacityFrom={0}>
           <p className="text-gray-700 mb-6">

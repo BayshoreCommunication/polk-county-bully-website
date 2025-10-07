@@ -1,16 +1,19 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/components/motion/Reveal";
+import Stagger from "@/components/motion/Stagger";
 
 export default function Donation() {
   return (
     <section className="max-w-[1640px] px-8 py-8 md:py-16 mx-auto text-center">
       <div>
         {/* ===== Heading ===== */}
+        <Reveal y={20} opacityFrom={0}>
         <h2 className="text-3xl md:text-5xl font-bold text-[#2a3b47] mb-8">
           Your Donation Means Another Smile
         </h2>
-
+        </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6  mx-auto">
           <div className="flex flex-col lg:flex-row items-center  gap-8 p-6 lg:p-10 bg-[#F5F9FA]  rounded-lg">
             {/* ===== Image ===== */}
@@ -24,14 +27,18 @@ export default function Donation() {
               ></Image>
             </div>
             <div className="text-left">
+            <Reveal y={20} opacityFrom={0}>
               <h3 className="text-2xl lg:text-3xl font-semibold mb-2">
                 One-Time Donations
               </h3>
+              </Reveal>
+              <Reveal y={30} opacityFrom={0}>
               <p className="text-gray-700 mb-6 lg:mb-8 ">
                 Your donation helps us provide food, shelter, and medical
                 treatment to countless animals waiting for a second chance.
                 Every contribution — big or small.
               </p>
+              </Reveal>
               <Link
                 href="https://app.giveffect.com/charities/27544-polk-county-bully-project"
                 className="inline-flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-md font-medium hover:bg-sky-600 transition"
@@ -59,12 +66,16 @@ export default function Donation() {
               ></Image>
             </div>
             <div className="text-left">
+            <Reveal y={20} opacityFrom={0}>
               <h3 className="text-2xl lg:text-3xl font-semibold mb-2">Venmo</h3>
+              </Reveal>
+              <Reveal y={25} opacityFrom={0}>
               <p className="text-gray-700 mb-6 lg:mb-8 ">
                 Your donation helps us provide food, shelter, and medical
                 treatment to countless animals waiting for a second chance.
                 Every contribution — big or small.
               </p>
+              </Reveal>
               <Link
                 href="https://account.venmo.com/u/Polkcountybullyproject"
                 className="inline-flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-md font-medium hover:bg-sky-600 transition"
@@ -93,14 +104,18 @@ export default function Donation() {
               ></Image>
             </div>
             <div className="text-left">
+            <Reveal y={20} opacityFrom={0}>
               <h3 className="text-2xl lg:text-3xl font-semibold mb-2">
                 PayPal
               </h3>
+              </Reveal>
+              <Reveal y={25} opacityFrom={0}>
               <p className="text-gray-700 mb-6 lg:mb-8 ">
                 Your donation helps us provide food, shelter, and medical
                 treatment to countless animals waiting for a second chance.
                 Every contribution — big or small.
               </p>
+              </Reveal>
               <Link
                 href="https://www.paypal.com/paypalme/PolkCountyBullyProje"
                 className="inline-flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-md font-medium hover:bg-sky-600 transition"
@@ -128,14 +143,18 @@ export default function Donation() {
               ></Image>
             </div>
             <div className="text-left">
+            <Reveal y={20} opacityFrom={0}>
               <h3 className="text-2xl lg:text-3xl font-semibold mb-2">
                 Cash app
               </h3>
+              </Reveal>
+              <Reveal y={25} opacityFrom={0}>
               <p className="text-gray-700 mb-6 lg:mb-8 ">
                 Your donation helps us provide food, shelter, and medical
                 treatment to countless animals waiting for a second chance.
                 Every contribution — big or small.
               </p>
+              </Reveal>
               <Link
                 href="https://cash.app/$pcbp"
                 className="inline-flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-md font-medium hover:bg-sky-600 transition"

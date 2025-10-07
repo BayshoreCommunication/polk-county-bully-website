@@ -32,6 +32,12 @@ const testimonials = [
     author: "Sacha Dubois, Los Angeles, LA",
     avatar: "/images/testimonial/people3.png",
   },
+  {
+    id: 5,
+    text: "We couldn’t be happier with our adoption. The dog was healthy, happy, and ready to love. Thank you, Bully Project Rescue!",
+    author: "Sacha Dubois, Los Angeles, LA",
+    avatar: "/images/testimonial/people3.png",
+  },
   // {
   //   id: 5,
   //   text: "We couldn’t be happier with our adoption. The dog was healthy, happy, and ready to love. Thank you, Bully Project Rescue!",

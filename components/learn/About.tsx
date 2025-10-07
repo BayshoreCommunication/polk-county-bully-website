@@ -23,51 +23,19 @@ export default function AboutPitBulls() {
       </div>
 
       {/* ===== Content Grid ===== */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
         {/* ===== Left: Image Collage ===== */}
-        <div className="grid grid-cols-2 gap-4 lg:items-stretch">
-          {/* Tall image (left side) */}
-          <div className="col-span-1 row-span-2 relative w-full rounded-xl overflow-hidden aspect-[3/5] md:aspect-[4/6] lg:aspect-auto lg:h-[560px]">
-          <Reveal y={20} opacityFrom={0}>
-            <Image
-              src="/images/learnpage/about/left.png"
+        <Image
+              src="/images/learnpage/about/group.png"
               alt="Pit bull playing with tennis ball"
               width={1000}
               height={800}
-              className="object-cover object-top w-full h-full"
+              className="object-cover object-top w-[600px] h-full"
               priority
             />
-            </Reveal>
-          </div>
-
-          {/* Right column images (stacked) */}
-          <div className="relative w-full rounded-xl overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[270px]">
-          <Reveal y={25} opacityFrom={0}>
-            <Image
-              src="/images/learnpage/about/right1.png"
-              alt="Bulldog close up"
-              width={1000}
-              height={800}
-              className="object-cover object-top w-full h-full"
-            />
-            </Reveal>
-          </div>
-
-          <div className="relative w-full rounded-xl overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[270px]">
-          <Reveal y={30} opacityFrom={0}>
-            <Image
-              src="/images/learnpage/about/right2.png"
-              alt="Pit bull looking up"
-              width={1000}
-              height={800}
-              className="object-cover object-top w-full h-full"
-            />
-            </Reveal>
-          </div>
-        </div>
 
         {/* ===== Right: Text Content ===== */}
-        <div className="text-gray-700 text-sm md:text-base leading-relaxed space-y-4">
+        <div className="lg:col-span-2 text-gray-700 text-sm md:text-base leading-relaxed space-y-4">
         <Stagger>
         <Reveal y={10} opacityFrom={0}>
           <h3 className="text-2xl md:text-3xl font-bold text-[#2a3b47] mb-4">
