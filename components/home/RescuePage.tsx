@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import CountUp from "react-countup";
+import Reveal from "@/components/motion/Reveal";
+import Stagger from "@/components/motion/Stagger";
 
 const howItWorksSteps = [
   {
@@ -63,9 +65,11 @@ export default function RescuePage() {
             className="h-auto w-[600px]"
           />
           <div className="">
+          <Reveal y={20} opacityFrom={0}>
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
               Rescue, Care, and Hope for <br /> Polk County’s Pit Bulls
             </h2>
+            </Reveal>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="l">
@@ -78,11 +82,15 @@ export default function RescuePage() {
                   />
                 </div>
                 <div>
+                <Reveal y={20} opacityFrom={0}>
                   <h3 className="font-semibold">Professional Breeder</h3>
+                  </Reveal>
+                  <Reveal y={30} opacityFrom={0}>
                   <p className="text-gray-600 text-sm">
                     We partner only with responsible breeders who prioritize
                     health, safety, and proper care for every dog.
                   </p>
+                  </Reveal>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -96,11 +104,15 @@ export default function RescuePage() {
                   />
                 </div>
                 <div>
+                <Reveal y={20} opacityFrom={0}>
                   <h3 className="font-semibold">Standard Quality</h3>
+                  </Reveal>
+                  <Reveal y={30} opacityFrom={0}>
                   <p className="text-gray-600 text-sm">
                     We uphold the highest standards of care, safety, and
                     compassion for every dog.
                   </p>
+                  </Reveal>
                 </div>
               </div>
             </div>
@@ -179,7 +191,11 @@ export default function RescuePage() {
 
         {/* How It Works Section */}
         <div className="mt-16 text-center">
+        <Stagger>
+        <Reveal y={20} opacityFrom={0}>
           <h2 className="text-2xl md:text-3xl font-bold mb-4">How it works?</h2>
+          </Reveal>
+          <Reveal y={30} opacityFrom={0}>
           <p className="text-gray-600 max-w-2xl mx-auto mb-12">
             At Bully Project Rescue, we carefully rescue dogs in need, providing
             medical care, vaccinations, and spay/neuter services. Each dog
@@ -188,7 +204,9 @@ export default function RescuePage() {
             works closely with adopters to ensure every match is safe and
             lasting, giving each dog the second chance they deserve.
           </p>
+          </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            
             {howItWorksSteps.map((step) => (
               <div key={step.id} className="text-center ">
                 <div className="relative  ">
@@ -209,6 +227,7 @@ export default function RescuePage() {
               </div>
             ))}
           </div>
+          </Stagger>
         </div>
       </div>
     </div>
