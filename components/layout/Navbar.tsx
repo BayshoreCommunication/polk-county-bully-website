@@ -173,19 +173,19 @@ export default function Navbar() {
             <div className="border-t-2 border-primary absolute left-0 top-full hidden group-hover:block bg-white shadow-lg mt-0 rounded-lg z-50 min-w-[200px] transition-all duration-200 ease-out">
               <div className="pt-2">
                 <Link
-                  href="https://www.giveffect.com/charities/27544-polk-county-bully-project/volunteer_application"
+                  href="volunteer_application"
                   className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
                 >
                   Volunteer Application
                 </Link>
                 <Link
-                  href="https://www.giveffect.com/charities/27544-polk-county-bully-project/volunteer"
+                  href="volunteer_calender"
                   className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
                 >
                   Volunteer Calendar
                 </Link>
                 <Link
-                  href="https://linktr.ee/PolkCountyBullyProject"
+                  href="other_link"
                   className="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors"
                 >
                   Other Links
